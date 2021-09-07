@@ -7,18 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 class="title">About Page</h1>
-
-  <?php foreach($data as $key=>$value): ?>
-  <?=$key ?> : <?=$value?> </br>
-  <?php endforeach; ?>
-
+  <h1 class="articleTitle"><?= $data['title'] ?></h1>
+  <div class="articleDescription"><?= $data['description'] ?></div>
 
   <style>
     body {
       background-color: brown;
       color: #fff;
       font-family: sans-serif;
+    }
+    .articleDescription {
+      text-align: center;
+      
     }
     h1 {
       text-align: center;

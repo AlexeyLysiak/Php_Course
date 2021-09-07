@@ -8,9 +8,16 @@
 </head>
 <body>
   <h1 class="title">Admin's Panel</h1>
-  <div class="description">
-    Description Admin's Panel  
-  <div>
+
+  <ul class="tabs">
+    <?php foreach($data as $key=>$value): ?>
+      <li class="tab">
+        <a href="#<?=$value?>">
+          <?=$value?>
+        </a>
+      </li>
+    <?php endforeach; ?>
+  </ul>
 
   <style>
     body {
@@ -21,6 +28,16 @@
     div, h1 {
       text-align: center;
       margin: 0;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+    }
+    .tab {
+      margin-right: 10px;
+    }
+    .tab:last-child {
+      margin-right: 0px;
     }
     h1 {
       font-weight: 500;

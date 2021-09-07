@@ -8,12 +8,37 @@
 </head>
 <body>
   <h1 class="title">Gallery Page</h1>
-
+  
+  <ul class="gallery">
+    <?php foreach($data as $key=>$value): ?>
+      <li class="img-wrap">
+        <img src="<?=$value?>" alt="<?=$key?>">
+      </li>
+    <?php endforeach; ?>
+  </ul>
+  
   <style>
     body {
       background-color: brown;
       color: #fff;
       font-family: sans-serif;
+    }
+    .gallery {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-wrap {
+      margin-right: 10px;
+      /* width: 200px; */
+    }
+    .img-wrap:last-child {
+      margin-right: 0px;
+    }
+    .img-wrap img {
+      width: 100%;
+      height: auto;
     }
     h1 {
       text-align: center;

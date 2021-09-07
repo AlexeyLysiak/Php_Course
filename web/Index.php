@@ -7,18 +7,32 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 class="title">Index Page</h1>
-
+  <header class="header"><?= $data["header"]?></header>
+  <div class="description"><?= $data["description"]?></div>
+  <div class="copyright"><?= $data["copyright"]?></div>
   <style>
     body {
       background-color: brown;
       color: #fff;
       font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    h1 {
-      text-align: center;
-      margin: 0;
+    .copyright {
+      margin-top: 100%;
+    }
+    .description {
+      font-size: 24px;
       font-weight: 500;
+    }
+    .header {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
+      font-weight: 600;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
